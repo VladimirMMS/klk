@@ -54,6 +54,16 @@ num_color = jugador.creation_of_card()
 creation = jugador.creation_of_special_deck()
 will = jugador.creation_of_willcard()
 total = jugador.decks
+print(total)
+cumcolor = []
+for p in range(0,len(num_color[0])):
+    st = ""
+    st += str(num_color[0][p])
+    st +=  " " + str(num_color[1][p])
+    cumcolor.append(st)
+    st = ""
+    
+print(cumcolor)
 
 
 
