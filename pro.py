@@ -75,7 +75,6 @@ for p in range(0,len(num_color[0])):
 
 
 
-
 # class Deck_special:
 #     def __init__(self,ability,color):
 #         self.color = color
