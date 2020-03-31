@@ -9,7 +9,8 @@ class Deck:
 
 class Table:
     def __init__(self):
-        self.decks = [] 
+        self.decks = []
+        
     
     def creation_of_card(self):
         colors = ['Blue', 'Red', 'Yellow','Green']

@@ -10,9 +10,7 @@ class Players:
 
 
     def Distribute_of_deck(self):
-        take = ("Introduzca uno para repartir:")
-        if take == 1:
-            random.shuffle(total)
+        random.shuffle(total)
         for i in range(7):
             card1 = total.pop(0)
             self.deck_of_player.append(card1)
@@ -24,19 +22,30 @@ class Players:
         for ve in will:
             if ve == self.deck_table[0]:
                 take = (input('Introduce el nombre de la carta que quitar sacar:'))
-                for leng in range(len(Player1.deck_of_player)):
-                    for walk in Player1.deck_of_player:
+                for leng in range(len(self.deck_of_player)):
+                    for walk in self.deck_of_player:
                         if walk == take:
-                            Player1.deck_of_player.pop(leng)
+                            self.deck_of_player.pop(leng)
                             self.deck_table.append(take)
-            # else:
-            for n_c in range(len(Player1.deck_of_player)):
-                if self.deck_table[0] in Player1.deck_of_player[n_c] or self.deck_table[1] in Player1.deck_of_player[n_c]:
-                    take = (input('Indroduce la carta que quieres sacar:'))
-                    re = Player1.deck_of_player.pop(leng)
-                    self.deck_table.append(take)
-                        
-                    
+                        else:
+                            print("The name of the card is incorrect")
+                            
+            else:
+                for n_c in range(len(self.deck_of_player)):
+                    if self.deck_table[0] in self.deck_of_player[n_c]:  
+                        if self.deck_table[1] in self.deck_of_player[n_c]:
+                            take = (input('Indroduce la carta que quieres sacar:'))
+                            for walk in self.deck_of_player:
+                                if walk == take:
+                                    re = self.deck_of_player.pop(leng)
+                                    self.deck_table.append(take)
+                                else:
+                                    if walk not in  take:
+                                        take = (input("You don't have card for play, enter 1 for take of mazo:"))
+                                        if take == 1:
+                                            dele = total.pop(0)
+                                            self.deck_of_player(dele)
+
 
 
     def Mov_of_player(self):
@@ -89,38 +98,42 @@ def creator_of_player():
 input_player()
 creator_of_player()
 
-if len(PlayerList) == 4:
-    Player1 = Players(PlayerList[0])
-    Player1.Distribute_of_deck()
-    print(Player1.name, Player1.deck_of_player)
-    Player1.Behavior_of_deck()
-    Player2 = Players(PlayerList[1])
-    Player2.Distribute_of_deck()
-    print(Player2.name, Player2.deck_of_player)
-    Player3 = Players(PlayerList[2])
-    Player3.Distribute_of_deck()
-    print(Player3.name, Player3.deck_of_player)
-    Player4 = Players(PlayerList[3])
-    Player4.Distribute_of_deck()
-    print(Player4.name, Player4.deck_of_player)
-    Player1.Behavior_of_deck()
-if len(PlayerList) == 3:
-    Player1 = Players(PlayerList[0])
-    Player1.Distribute_of_deck()
-    print(Player1.name,  Player1.deck_of_player)
-    Player2 = Players(PlayerList[1])
-    Player2.Distribute_of_deck()
-    print(Player2.name,Player2.deck_of_player)
-    Player3 = Players(PlayerList[2])
-    Player3.Distribute_of_deck()    
-    print(Player3.name, Player3.deck_of_player)
-if len(PlayerList) == 2:
-    Player1 = Players(PlayerList[0])
-    Player1.Distribute_of_deck()
-    print(Player1.name, Player1.deck_of_player)
-    Player2 = Players(PlayerList[1])
-    Player2.Distribute_of_deck()
-    print(Player2.name, Player2.deck_of_player)
+# if len(PlayerList) == 4:
+
+Player1 = Players(PlayerList[0])
+Player1.Distribute_of_deck()
+print(Player1.deck_table)
+print(Player1.name, Player1.deck_of_player)
+Player1.Behavior_of_deck()
+Player2 = Players(PlayerList[1])
+Player2.Distribute_of_deck()
+print(Player2.name, Player2.deck_of_player)
+Player3 = Players(PlayerList[2])
+Player3.Distribute_of_deck()
+print(Player3.name, Player3.deck_of_player)
+Player4 = Players(PlayerList[3])
+Player4.Distribute_of_deck()
+print(Player4.name, Player4.deck_of_player)
+print(Player1.name, Player1.deck_of_player)
+# print(Player1.deck_table)
+
+# if len(PlayerList) == 3:
+#     Player1 = Players(PlayerList[0])
+#     Player1.Distribute_of_deck()
+#     print(Player1.name,  Player1.deck_of_player)
+#     Player2 = Players(PlayerList[1])
+#     Player2.Distribute_of_deck()
+#     print(Player2.name,Player2.deck_of_player)
+#     Player3 = Players(PlayerList[2])
+#     Player3.Distribute_of_deck()    
+#     print(Player3.name, Player3.deck_of_player)
+# if len(PlayerList) == 2:
+#     Player1 = Players(PlayerList[0])
+#     Player1.Distribute_of_deck()
+#     print(Player1.name, Player1.deck_of_player)
+#     Player2 = Players(PlayerList[1])
+#     Player2.Distribute_of_deck()
+#     print(Player2.name, Player2.deck_of_player)
 
 
 
