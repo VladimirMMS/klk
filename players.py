@@ -71,6 +71,9 @@ class Players:
                         for colors in colors_spe:
                             if colors in take:
                                 self.deck_table.append(take)
+                for e in range(0,1):
+                    for s in a[0:4]:
+                        if Player1
 
 PlayerList = []
 
