@@ -1,5 +1,6 @@
 from pro import total,creation,will, cumcolor
 import random 
+44
 class Players:
     def __init__(self, name):
         self.name = name
@@ -71,9 +72,9 @@ class Players:
                         for colors in colors_spe:
                             if colors in take:
                                 self.deck_table.append(take)
-                for e in range(0,1):
-                    for s in a[0:4]:
-                        if Player1
+                # for e in range(0,1):
+                #     for s in a[0:4]:
+                #         if Player1
 
 PlayerList = []
 
@@ -105,7 +106,7 @@ creator_of_player()
 
 Player1 = Players(PlayerList[0])
 Player1.Distribute_of_deck()
-print(Player1.deck_table)
+print(Player1.deck_table[::-1])
 print(Player1.name, Player1.deck_of_player)
 Player1.Behavior_of_deck()
 Player2 = Players(PlayerList[1])
